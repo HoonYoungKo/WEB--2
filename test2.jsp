@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,7 +81,7 @@
 
 
 
-  <main id="main">
+  <div id="main">
 
     <!--==========================
       cowallker Section
@@ -93,10 +95,10 @@
 
           <div class="col-lg-6 content">
             <h2>COWALLKER?</h2>
-            <h3>Wall-painting & volunteering</h3>
+            <h3>Wall-painting , volunteering</h3>
 
             <ul>
-              <li><img src="img/list1.png"> aaaa</li>
+              <li><img src="img/list1.png"> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
               <li><img src="img/list2.png"> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
               <li><img src="img/list3.png"> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
             </ul>
@@ -191,9 +193,9 @@
             <div class="piece-item wow fadeInUp">
               <a href="img/piece/1.jpg" class="piece-popup">
                 <img src="img/piece/1.jpg" alt="">
-                <div class="piece-overlay">
-                  <div class="piece-info"><h2 class="wow fadeInUp">고척동 함크카페</h2></div>
-                </div>
+	              <div class="piece-overlay">
+	                <div class="piece-info"><h2 class="wow fadeInUp">고척동 함크카페</h2></div>
+	              </div>
               </a>
             </div>
           </div>
@@ -520,7 +522,7 @@
       </div>
     </section><!-- #contact -->
 
-  </main>
+  </div>
 
   <!--==========================
     Footer

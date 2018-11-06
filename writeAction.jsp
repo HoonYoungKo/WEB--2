@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>JSP 게시판 웹 사이트</title>
+<title>COWALLKER</title>
 </head>
 <body>
 	<%	
@@ -27,10 +27,10 @@
 		} else{
 			if (bbs.getBbsTitle() == null || bbs.getBbsContent() == null){
 					PrintWriter script = response.getWriter();
-					script.println("<sript>");
+					script.println("<script>");
 					script.println("alert('입력이 안 된 사항이 있습니다.')");
 					script.println("history.back()");
-					script.println("</sript>");
+					script.println("</script>");
 					} else {
 						BbsDAO bbsDAO = new BbsDAO();
 					 	int result = bbsDAO.write(bbs.getBbsTitle(), userID, bbs.getBbsContent());

@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>COWALLKER 로그인</title>
+<title>JSP 게시판 웹 사이트</title>
 </head>
 <body>
 	<script>
-		location.href='intro.jsp';
+		location.href='main.jsp';
 	</script>
 </body>
 </html>

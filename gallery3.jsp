@@ -115,94 +115,77 @@
         <small>gallery</small>
       </h1>
 		
-      <!-- item-1:별담마을 -->
+    <!-- item-4:준비중 -->
       <div class="row">
         <div class="col-md-7">
           <section id="gallery">
 		    <div id="gallery-carousel" class="owl-carousel" >
-		      <div class="item" style="background-image: url('img/gallery/gall1/1.jpg');"></div>
-		      <div class="item" style="background-image: url('img/gallery/gall1/2.jpg');"></div>
-		      <div class="item" style="background-image: url('img/gallery/gall1/3.jpg');"></div>
-		      <div class="item" style="background-image: url('img/gallery/gall1/4.jpg');"></div>
-		      <div class="item" style="background-image: url('img/gallery/gall1/5.jpg');"></div>
+		      <div class="item" style="background-image: url('img/gallery/ready.jpg');"></div>
+		     
 		    </div>
   		</section>
         </div>
         <div class="col-md-5">
-          <h3 style="font-family: 'Gaegu', cursive;">별담 마을</h3>
-          <p>동화를 주제로 2017년부터 자원봉사자들의 그림으로 채워나간 마을
-          	<br><br>서울 상도2동 장승배기역 장승배기로 9번길</p>
-          <a class="btn btn-primary" href="inform1.jsp">보러가기</a><a class="btn btn-primary2" href="volunteerSubmit.jsp">신청하기</a>
+          <h3 style="font-family: 'Gaegu', cursive;">준비중입니다.</h3>
+          
+          <a class="btn btn-primary" href="#">보러가기</a><a class="btn btn-primary2" href="#">신청하기</a>
         </div>
       </div>
-   
 
       <hr>
 
-      <!-- item-2:자만 -->
+      <!-- item-4:준비중 -->
       <div class="row">
         <div class="col-md-7">
           <section id="gallery2">
 		    <div id="gallery2-carousel" class="owl-carousel" >
-		      <div class="item" style="background-image: url('img/gallery/gall2/1.jpg');"></div>
-		      <div class="item" style="background-image: url('img/gallery/gall2/2.jpg');"></div>
-		      <div class="item" style="background-image: url('img/gallery/gall2/3.jpg');"></div>
-		      <div class="item" style="background-image: url('img/gallery/gall2/4.jpg');"></div>
-		      <div class="item" style="background-image: url('img/gallery/gall2/5.jpg');"></div>
+		      <div class="item" style="background-image: url('img/gallery/ready.jpg');"></div>
+		     
 		    </div>
   		</section>
         </div>
         <div class="col-md-5">
-          <h3 style="font-family: 'Gaegu', cursive;">수암골 벽화마을</h3>
-          <p>청주시의 대표적 벽화마을
-          	<br><br>주변 카페촌들로 인해 볼거리가 많은곳	<br><br> 충북 청주시 상당구 수암목 1번지.</p>
-          <a class="btn btn-primary" href="inform2.jsp">보러가기</a><a class="btn btn-primary2" href="volunteerSubmit2.jsp">신청하기</a>
+          <h3 style="font-family: 'Gaegu', cursive;">준비중입니다.</h3>
+          
+          <a class="btn btn-primary" href="#">보러가기</a><a class="btn btn-primary2" href="#">신청하기</a>
         </div>
       </div>
 
       <hr>
 
-      <!-- item-3:자만 벽화마을 -->
+      <!-- item-3:준비중 -->
       <div class="row">
         <div class="col-md-7">
           <section id="gallery3">
 		    <div id="gallery3-carousel" class="owl-carousel" >
-		      <div class="item" style="background-image: url('img/gallery/gall3/1.jpg');"></div>
-		      <div class="item" style="background-image: url('img/gallery/gall3/2.jpg');"></div>
-		      <div class="item" style="background-image: url('img/gallery/gall3/3.jpg');"></div>
-		      <div class="item" style="background-image: url('img/gallery/gall3/4.jpg');"></div>
-		      <div class="item" style="background-image: url('img/gallery/gall3/5.jpg');"></div>
+		      <div class="item" style="background-image: url('img/gallery/ready.jpg');"></div>
+		     
 		    </div>
   		</section>
         </div>
         <div class="col-md-5">
-          <h3 style="font-family: 'Gaegu', cursive;">자만 벽화마을</h3>
-          <p>자만 벽화마을
-          	<br><br>마을 주민들의 자발적인 참여로<br><br> 문화 예술 공동체 마을을 만든 곳.<br><br> 전북 전주시 완산구 교동 50-158.</p>
-          <a class="btn btn-primary" href="inform3.jsp">보러가기</a><a class="btn btn-primary2" href="volunteerSubmit3.jsp">신청하기</a>
+          <h3 style="font-family: 'Gaegu', cursive;">준비중입니다.</h3>
+          
+          <a class="btn btn-primary" href="#">보러가기</a><a class="btn btn-primary2" href="#">신청하기</a>
         </div>
       </div>
 
       <hr>
 
-      <!-- item-4:이화 벽화마을 -->
-     <div class="row">
+     <!-- item-4:준비중 -->
+      <div class="row">
         <div class="col-md-7">
           <section id="gallery4">
 		    <div id="gallery4-carousel" class="owl-carousel" >
-		      <div class="item" style="background-image: url('img/gallery/gall4/1.jpg');"></div>
-		      <div class="item" style="background-image: url('img/gallery/gall4/2.jpg');"></div>
-		      <div class="item" style="background-image: url('img/gallery/gall4/3.jpg');"></div>
-		      <div class="item" style="background-image: url('img/gallery/gall4/4.jpg');"></div>
-		      <div class="item" style="background-image: url('img/gallery/gall4/5.jpg');"></div>
+		      <div class="item" style="background-image: url('img/gallery/ready.jpg');"></div>
+		     
 		    </div>
   		</section>
         </div>
         <div class="col-md-5">
-          <h3 style="font-family: 'Gaegu', cursive;">이화 벽화마을</h3>
-          <p>2006년 9월부터 12월까지 약 3억 5천만 원의 예산으로 <br><br>이화동과 동숭동 일대에 주민과 예술인, <br><br>대학생과 자원봉사자의 참여로 벽화가 그려진 마을
-          		<br><br> 서울 종로구 이화동 이화마을</p>
-          <a class="btn btn-primary" href="inform4.jsp">보러가기</a><a class="btn btn-primary2" href="volunteerSubmit4.jsp">신청하기</a>
+          <h3 style="font-family: 'Gaegu', cursive;">준비중입니다.</h3>
+          
+          <a class="btn btn-primary" href="#">보러가기</a><a class="btn btn-primary2" href="#">신청하기</a>
         </div>
       </div>
 
@@ -211,22 +194,22 @@
       <!-- Pagination -->
       <ul class="pagination justify-content-center">
         <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
+          <a class="page-link" href="gallery2.jsp" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
             <span class="sr-only">Previous</span>
           </a>
         </li>
         <li class="page-item">
-          <a class="page-link" href="gallery.jsp" style="font-weight:bold; color:#e5e282;">1</a>
+          <a class="page-link" href="gallery.jsp">1</a>
         </li>
         <li class="page-item">
-          <a class="page-link" href="gallery2.jsp">2</a>
+          <a class="page-link" href="gallery2.jsp" >2</a>
         </li>
         <li class="page-item">
-          <a class="page-link" href="gallery3.jsp">3</a>
+          <a class="page-link" href="gallery3.jsp" style="font-weight:bold; color:#e5e282;">3</a>
         </li>
         <li class="page-item">
-          <a class="page-link" href="gallery2.jsp" aria-label="Next">
+          <a class="page-link" href="#" aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
             <span class="sr-only">Next</span>
           </a>

@@ -25,16 +25,16 @@
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("alert('이미 로그인이 되어 있습니다.')");
-			script.println("location.href = 'cowallker.jsp'");
+			script.println("location.href = 'main.jsp'");
 			script.println("</script>");
 		}
 		if (user.getUserID() == null || user.getUserPassword() == null || user.getUserName() == null
 		|| user.getUserGender() == null || user.getUserEmail() == null){
 		PrintWriter script = response.getWriter();
-		script.println("<script>");
+		script.println("<sript>");
 		script.println("alert('입력이 안 된 사항이 있습니다.')");
 		script.println("history.back()");
-		script.println("</script>");
+		script.println("</sript>");
 		} else {
 			UserDAO userDAO = new UserDAO();
 		 	int result = userDAO.join(user);
@@ -49,7 +49,7 @@
 				session.setAttribute("userID", user.getUserID());
 				PrintWriter script = response.getWriter();
 				script.println("<script>");
-				script.println("location.href='cowallker.jsp'");
+				script.println("location.href='main.jsp'");
 				script.println("</script>");
 			}
 		}

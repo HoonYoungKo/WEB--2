@@ -1,14 +1,18 @@
+<%@page import="java.nio.file.attribute.UserPrincipalNotFoundException"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="user.UserDAO" %>
+<%@ page import="submit.SubmitDAO" %>
+
 <%@ page import="java.io.PrintWriter" %>
 <% request.setCharacterEncoding("UTF-8"); %>
-<jsp:useBean id="user" class="user.User" scope="page" />
-<jsp:setProperty name="user" property="userID"/>
-<jsp:setProperty name="user" property="userPassword"/>
-<jsp:setProperty name="user" property="userName"/>
-<jsp:setProperty name="user" property="userGender"/>
-<jsp:setProperty name="user" property="userEmail"/>
+<jsp:useBean id="submit" class="submit.Submit" scope="page" />
+
+<jsp:setProperty name="submit" property="submitTitle"/>
+
+<jsp:setProperty name="submit" property="userNumber"/>
+<jsp:setProperty name="submit" property="submitPhone"/>
+<jsp:setProperty name="submit" property="submitContent"/>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,38 +22,41 @@
 <body>
 	<%	
 		String userID = null;
+		
 		if(session.getAttribute("userID") != null){
 			userID = (String) session.getAttribute("userID");
+			
 		}
-		if (userID != null) {
+		
+	
+		if (userID == null) {
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
-			script.println("alert('이미 로그인이 되어 있습니다.')");
-			script.println("location.href = 'cowallker.jsp'");
+			script.println("alert('로그인을 하세요.')");
+			script.println("location.href = 'login.jsp'");
 			script.println("</script>");
 		}
-		if (user.getUserID() == null || user.getUserPassword() == null || user.getUserName() == null
-		|| user.getUserGender() == null || user.getUserEmail() == null){
+		if (submit.getSubmitTitle() == null || submit.getUserNumber() == null || submit.getSubmitPhone() == null || submit.getSubmitContent() == null ){
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
 		script.println("alert('입력이 안 된 사항이 있습니다.')");
 		script.println("history.back()");
 		script.println("</script>");
 		} else {
-			UserDAO userDAO = new UserDAO();
-		 	int result = userDAO.join(user);
+			SubmitDAO submitDAO = new SubmitDAO();
+		 	int result = submitDAO.submit(submit.getSubmitTitle(), userID, submit.getUserNumber() , submit.getSubmitPhone(), submit.getSubmitContent());
 			if (result == -1) {
 				PrintWriter script = response.getWriter();
 				script.println("<script>");
-				script.println("alert('이미 존재하는 아이디입니다.')");
+				script.println("alert('신청에 실패했습니다.')");
 				script.println("history.back()");
 				script.println("</script>");
 			} 
 			else {
-				session.setAttribute("userID", user.getUserID());
 				PrintWriter script = response.getWriter();
 				script.println("<script>");
-				script.println("location.href='cowallker.jsp'");
+				script.println("alert('신청이 완료되었습니다.')");
+				script.println("location.href='gallery.jsp'");
 				script.println("</script>");
 			}
 		}

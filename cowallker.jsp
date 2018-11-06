@@ -10,17 +10,16 @@
   <meta content="" name="keywords">
   <meta content="" name="description">
 
-  <!-- Favicons -->
+  <!-- 아이콘 -->
   <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
+  <!-- 구글폰트 -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Dokdo|Noto+Sans+JP|Gaegu|Gugi|Hi+Melody" rel="stylesheet">
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- 부트스트랩 CSS -->
+  <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
 
-  <!-- Libraries CSS Files -->
+  <!-- Library CSS 파일 -->
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
@@ -28,24 +27,17 @@
   <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
 
-  <!-- Main Stylesheet File -->
+  <!-- css -->
   <link href="css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-    Theme Name: Reveal
-    Theme URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
+  
 </head>
 
 <body id="body">
 
 
 
-  <!--==========================
-    Header
-  ============================-->
+  <!-- 사이드  네비게이션 -->
   	<%
 		String userID = null;
 		if (session.getAttribute("userID") !=null){
@@ -53,7 +45,7 @@
 		}
 	%>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+    <a class="navbar-brand js-scroll-trigger" href="intro.jsp">
       <span class="d-block d-lg-none">COWALLKER</span>
       <span class="d-none d-lg-block" style="font-family: 'Gaegu', cursive;">
         MENU ★
@@ -65,43 +57,51 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav" style="font-family: 'Gaegu', cursive;">
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#cowallker">COWALLKER?</a>
+          <a class="nav-link js-scroll-trigger" href="cowallker.jsp#cowallker">COWALLKER?</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#services">SERVICES</a>
+          <a class="nav-link js-scroll-trigger" href="cowallker.jsp#services">SERVICES</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#piece">PIECE</a>
+          <a class="nav-link js-scroll-trigger" href="cowallker.jsp#piece">PIECE</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#team">COOPERATOR</a>
+          <a class="nav-link js-scroll-trigger" href="cowallker.jsp#team">COOPERATOR</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="gallery.jsp">Gallery</a>
+          <a class="nav-link js-scroll-trigger" href="gallery.jsp">GALLERY</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="bbs.jsp">Board</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="chatindex.jsp">Live chat</a>
         </li>
         <%
 				if(userID == null){
 			%>
-        <li class="nav-item dropdown">
-          <a class="nav-link js-scroll-trigger ddropdown-toggle" data-toggle="dropdown" href="#">Log<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="login.jsp">login</a></li>
-              <li><a href="join.jsp">sign up</a></li>
-            </ul>
+          <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="login.jsp">Log in</a>
+        </li>
+         <%
+				} else if(userID.equals("cowall")){
+		%>
+		<li class="nav-item">
+          	<a class="nav-link js-scroll-trigger" href="managerbbs.jsp">ADM Page</a>
+       	 </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="logoutAction.jsp">Log Out</a>
         </li>
         <%
 				} else {
 			%>
-			<li class="nav-item dropdown">
-          <a class="nav-link js-scroll-trigger ddropdown-toggle" data-toggle="dropdown" href="#">My Home<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="bbs.jsp">게시판</a></li>
-              <li><a href="logoutAction.jsp">Logout</a></li>
-            </ul>
+			  <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="logoutAction.jsp">Log Out</a>
         </li>
         <%
 				}
 			%>
+		
       </ul>
     </div>
   </nav>
@@ -126,7 +126,7 @@
             <h3>Wall-painting , volunteering</h3>
 			<!-- Noto+Sans+JP|Gaegu|Gugi|Hi+Melody -->
             <ul style="font-family: 'Gaegu', cursive; font-size:25px;">
-              <li ><img src="img/list1.png"> <strong style="color:#6bbadb;">COWALLKER</strong>는 COWORK 와  WALL-PAINTING</li>
+              <li><img src="img/list1.png"> <strong style="color:#6bbadb;">COWALLKER</strong>는 COWORK 와  WALL-PAINTING</li>
                <hr>
               <li><img src="img/list2.png">  의 합성어로 벽화 자원봉사 모집 커뮤니티입니다.</li>
                <hr>
@@ -350,7 +350,7 @@
         </div>
 
     <!--==========================
-      Our Team Section
+     Cooperator section
     ============================-->
     <section id="team" class="wow fadeInUp">
       <div class="container">
@@ -360,7 +360,7 @@
         <div class="row">
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="img/cooperator/네오맨.jpg" alt="네오맨"></div>
+              <div class="pic"><img src="img/cooperator/neo.jpg" alt="네오맨"></div>
               <div class="details">
                 <h4>네오맨 벽화봉사단</h4>
                 <span>NeoMan</span>
@@ -373,7 +373,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="img/cooperator/더그림.jpg" alt="더그림"></div>
+              <div class="pic"><img src="img/cooperator/thegreem.jpg" alt="더그림"></div>
               <div class="details">
                 <h4>더 그림</h4>
                 <span>The Greem</span>
@@ -386,7 +386,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="img/cooperator/드림인공존.jpg" alt="드림인공존"></div>
+              <div class="pic"><img src="img/cooperator/dream.jpg" alt="드림인공존"></div>
               <div class="details">
                 <h4>드림 인 공존</h4>
                 <span>Dream in Gzone</span>
@@ -400,7 +400,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="img/cooperator/스마일.jpg" alt="스마일"></div>
+              <div class="pic"><img src="img/cooperator/smile.jpg" alt="스마일"></div>
               <div class="details">
                 <h4>스마일 자원봉사단</h4>
                 <span>COUNTRY SMILE</span>
@@ -426,7 +426,7 @@
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>COWALLKER</strong>
+         <strong>COWALLKER</strong>
       </div>
       <div class="credits">
         Designed by Hoon Young Ko

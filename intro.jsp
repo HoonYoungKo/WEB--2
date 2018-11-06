@@ -51,11 +51,11 @@
 			userID = (String) session.getAttribute("userID");
 		}
 	%>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="intro.jsp">
       <span class="d-block d-lg-none">COWALLKER</span>
       <span class="d-none d-lg-block" style="font-family: 'Gaegu', cursive;">
-        MENU¡Ú
+        MENU ¡Ú
       </span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,39 +64,46 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav" style="font-family: 'Gaegu', cursive;">
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#cowallker">COWALLKER?</a>
+          <a class="nav-link js-scroll-trigger" href="cowallker.jsp#cowallker">COWALLKER?</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#services">SERVICES</a>
+          <a class="nav-link js-scroll-trigger" href="cowallker.jsp#services">SERVICES</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#piece">PIECE</a>
+          <a class="nav-link js-scroll-trigger" href="cowallker.jsp#piece">PIECE</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#team">COOPERATOR</a>
+          <a class="nav-link js-scroll-trigger" href="cowallker.jsp#team">COOPERATOR</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#gallery">Gallery</a>
+          <a class="nav-link js-scroll-trigger" href="gallery.jsp">GALLERY</a>
         </li>
-        <%
+         <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="bbs.jsp">Board</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="chatindex.jsp">Live chat</a>
+        </li>
+         <%
 				if(userID == null){
 			%>
-        <li class="nav-item dropdown">
-          <a class="nav-link js-scroll-trigger ddropdown-toggle" data-toggle="dropdown" href="#">Log<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="login.jsp">login</a></li>
-              <li><a href="join.jsp">sign up</a></li>
-            </ul>
+          <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="login.jsp">Log in</a>
+        </li>
+         <%
+				} else if(userID.equals("cowall")){
+		%>
+		<li class="nav-item">
+          	<a class="nav-link js-scroll-trigger" href="managerbbs.jsp">ADM Page</a>
+       	 </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="logoutAction.jsp">Log Out</a>
         </li>
         <%
 				} else {
 			%>
-			<li class="nav-item dropdown">
-          <a class="nav-link js-scroll-trigger ddropdown-toggle" data-toggle="dropdown" href="#">My Home<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="bbs.jsp">°Ô½ÃÆÇ</a></li>
-              <li><a href="logoutAction.jsp">Logout</a></li>
-            </ul>
+			  <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="logoutAction.jsp">Log Out</a>
         </li>
         <%
 				}
@@ -105,16 +112,29 @@
     </div>
   </nav>
 
+
   <!--==========================
     Intro Section
   ============================-->
   <section id="intro">
 
     <div class="intro-content">
-      <h2 style="font-family: 'Gaegu', cursive;">COWALLKER<br><span style="font-family: 'Gaegu', cursive;">wall painting & volunteer</span></h2>
+      <h2 style="font-family: 'Gaegu', cursive;">COWALLKER<br><span style="font-family: 'Gaegu', cursive;">wall painting <span style="color:#e5e282;">&</span> volunteering</span></h2>
       <div>
-        <a href="login.jsp" class="btn-login scrollto">Login</a>
-        <a href="join.jsp" class="btn-signup scrollto">Sign up</a>
+      
+      	 <%
+				if(userID == null){
+			%>
+         <a href="login.jsp" class="btn-login scrollto">Login</a>
+        <%
+				} else {
+			%>
+			  <a href="logoutAction.jsp" class="btn-login scrollto">Logout</a>
+        <%
+				}
+			%>
+      
+        <a href="join.jsp" class="btn-signup scrollto">Join</a>
       </div>
     </div>
 
